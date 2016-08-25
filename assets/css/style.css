@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.mainContainer {
+    color: #444;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 15px 30px 20px 30px;
+    margin-top: 40px;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.content.noExtraSpace{
+    margin-top: 0;
+}
+
+.content .headline {
+    margin-top: 20px;
+    color: #9b9b9b;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/wemo-footer@2x.png) no-repeat bottom center;
+    background-size: contain;
+    width: 100%;
+    height: 113px;
+}
+
+
+.content .headline.testResult {
+    color: #73d44c;
+    text-align: center;
+}
+
+.content .description {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 20px;
+    color: #777;
+}
+
+.content .description.highlight {
+    color: #4a90e2;
+    font-size: 13px;
+}
+
+.content .description.marginTop10 {
+    margin-top: 10px;
+}
+
+.content .description.marginTop30 {
+    margin-top: 30px;
+}
+
+.description.strong {
+    font-weight: 500;
+    color: #444;
+    margin-top: 20px;
+}
+
+.description ul {
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+.description .strong {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/*buttons*/
+.buttonGroup {
+    margin-top: 20px;
+}
+
+.buttonGroup.afterForm {
+    margin-top: 10px;
+}
+
+.buttonGroup .button {
+    text-align: center;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.buttonGroup .confirmBtn {
+    color: #67bf46;
+    border: solid 1px #bbbbbb;
+    outline: 0;
+    background: #fff;
+}
+
+.buttonGroup .cancelBtn {
+    border: 1px solid #bbbbbb;
+    color: #777;
+}
+
+
+/*input form style*/
+.form {
+    margin-top: 25px;
+}
+
+.form input {
+    padding: 15px;
+    border: solid 1px #bbbbbb;
+    outline: 0;
+    font-size: 17px;
+    width: 100%;
+    background: #fff;
+    color: #444;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    border-radius: 2px;
+}
+
+.form input::-webkit-input-placeholder {
+    color: #777;
+}
+
+/*countdown timer*/
+.countdown {
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.countdownText {
+    width: 50%;
+    float: left;
+}
+
+.countdownText .label{
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.countdownText #countdownTime {
+    font-size: 54px;
+    color: #777;
+    margin-top: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.countdownClock {
+    width: 50%;
+    float: right;
+}
+
+.clockBg {
+    display: block;
+    width: 110px;
+    height: 124px;
+    background-position: center;
+    background: url(../images/watchoutline@3x.png);
+    background-size: 110px 124px;
+    position: absolute;
+    z-index: 400;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    width: 86px;
+    height: 86px;
+    position: relative;
+    background: white;
+    margin-left: 20px;
+}
+
+.needle {
+    display: block;
+    width: 10px;
+    height: 86px;
+    background-position: center;
+    background: url(../images/needle@3x.png);
+    background-size: 10px 86px;
+    position: absolute;
+    left: 49px;
+    top: 29px;
+    z-index: 500;
+    /*adjust time here*/
+    animation: spinnerRotate 120s steps(1200) 1;
+    -webkit-animation: spinnerRotate 120s steps(1200) 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.wrapper .pie {
+    width: 50%;
+    height: 100%;
+    transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    position: absolute;
+    background: #73d44c;
+    margin: 29px 0 0 11px;
+}
+
+.wrapper .spinner {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    z-index: 200;
+    border-right: none;
+    /*adjust time here*/
+    animation: rota 120s steps(1200) 1;
+    -webkit-animation: rota 120s steps(1200) 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.wrapper .filler {
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    left: 50%;
+    opacity: 0;
+    z-index: 100;
+    /*adjust time here*/
+    animation: opa 120s steps(1,end) 1 reverse;
+    -webkit-animation: opa 120s steps(1,end) 1 reverse;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    border-left: none;
+}
+
+.wrapper .mask {
+    width: 51%;
+    height: 101%;
+    position: absolute;
+    background: inherit;
+    opacity: 1;
+    z-index: 300;
+    margin: 28px 0 0 10px;
+    /*adjust time here*/
+    animation: opa 120s steps(1,end) 1;
+    -webkit-animation: opa 120s steps(1,end) 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes rota {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rota {
+    0%   {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes opa {
+    0% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@-webkit-keyframes opa {
+    0% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@keyframes spinnerRotate {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@-webkit-keyframes spinnerRotate {
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+

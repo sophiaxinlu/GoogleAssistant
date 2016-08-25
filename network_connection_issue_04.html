@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" media="screen" href="assets/css/style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="content noExtraSpace">
+
+            <div class="headline">We are having trouble connecting to your network.</div>
+            <div class="description">Please enter the name of your Wi-Fi network and the MAC address of one of your Wemo devices.</div>
+            <div class="description highlight marginTop10">To find your MAC address, open Wemo App and look under "Settings & About," select "Hardware Info" and select a device to copy and paste in the text field below.</div>
+
+            <form class="form">
+                <input type="text" name="networkName" id="networkName" placeholder="Your WiFi network name"/>
+                <input type="text" name="networkName" id="macAddress" placeholder="Your MAC address"/>
+
+                <div class="buttonGroup afterForm">
+                    <a class="confirmBtn button" href="wait_for_toggle_02.html">Try Again</a>
+                </div>
+            </form>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
